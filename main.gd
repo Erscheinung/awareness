@@ -34,7 +34,7 @@ var dragging_circle = null
 var dragging_offset = Vector2.ZERO
 var boredom_stage = 0
 var boredom_messages = [
-	"Arrange the caps on their matching pens.",
+	"Arrange the caps on their matching pens. DON'T EVEN THINK ABOUT MISMATCHING COLORS!",
 	"That's not right. Try a different arrangement.",
 	"Still not correct. Try again but differently.",
 	"Not quite. Notice your frustration. How does boredom feel?",
@@ -54,7 +54,7 @@ var anxiety_stage = 0
 var anxiety_messages = [
 	"Tap each timer before it runs out.",
 	"Notice your heart rate increasing.",
-	"Feel the urgency in your body.",
+	"What will happen if you just let go?",
 	"What thoughts arise when you can't keep up?",
 	"Can you be present with this feeling without trying to control it?",
 	"Anxiety is just energy in the body.",
@@ -1173,7 +1173,7 @@ func process_addiction_game(delta):
 		pleasure_meter.size.x = (pleasure_value / 100) * 200
 	
 	# Update side effect overlay
-	side_effect_overlay.color = Color(0.8, 0.0, 0.0, side_effect_value / 100)
+	side_effect_overlay.color = Color(0.8, 0.0, 0.0, side_effect_value / 10)
 
 func spawn_bubble():
 	var bubble = ColorRect.new()
